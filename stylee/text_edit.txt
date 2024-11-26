@@ -1,0 +1,30 @@
+*{background: transparent;
+}
+QTextEdit{
+        border: 1px solid #bc8ebd;
+        border-radius: 8px;
+        padding: 2px;
+}
+QScrollBar:vertical {
+                border: 1px solid rgba(0,0,0,40);    /* Цвет границы */
+                border-radius: 4px;
+                background: rgb(39, 39, 39);           /* Цвет фона полосы прокрутки */
+
+            }
+QScrollBar::handle:vertical {
+background: rgba(188, 142, 189, 180);;          /* Цвет "ручки" прокрутки */
+border-radius: 4px;
+min-height: 1px;             /* Минимальная высота "ручки" */
+max-height: 1px;             /* Максимальная высота "ручки" */
+            }
+QScrollBar::handle:vertical:hover {
+    background: #bc8ebd;          /* Цвет "ручки" при наведении */
+            }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;             /* Скрыть кнопки вверху и внизу */
+    height: 0px;
+            }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;             /* Скрыть фон для страниц */
+            }
+        """)

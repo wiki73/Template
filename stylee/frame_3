@@ -1,0 +1,7 @@
+*{
+        border: 1px solid #bc8ebd;
+        border-radius: 8px;
+}
+QPushButton{
+border:0px;
+}

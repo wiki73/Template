@@ -1,0 +1,19 @@
+QFrame{
+
+}
+QLabel {
+        color: white;
+        border-bottom: 1px solid #bc8ebd
+    }
+QLineEdit{
+       background: transparent;
+       font: 13px;
+       border: 1px solid green;
+}
+QLineEdit {
+                border: none;                     /* Убираем границу */
+                border-bottom: 2px solid blue; /* Цвет нижней линии */
+            }
+QLineEdit:focus {
+    border-bottom: 2px solid #a0a0a0; /* Цвет нижней линии при фокусе */
+}

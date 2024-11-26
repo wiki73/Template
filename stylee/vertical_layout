@@ -1,0 +1,6 @@
+QMainWindow {
+background-color: rgb(39, 39, 39)
+}
+*{
+background: transparent;
+font-size:15px;}

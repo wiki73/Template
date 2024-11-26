@@ -1,0 +1,15 @@
+*{background: transparent;
+}
+QTableWidget {
+        border: 1px solid #bc8ebd;
+        border-radius: 8px;
+        gridline-color: rgba(255,255,255,5)
+
+}
+QTableWidget::item {
+                padding: 10px;              /* Отступы внутри ячейки */
+            }
+QTableWidget::item:hover {
+    background-color:#bc8ebd;  /* Цвет фона ячейки при наведении */
+    background-radius: 15px;
+}

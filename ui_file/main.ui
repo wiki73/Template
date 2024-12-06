@@ -48,11 +48,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,20">
       <item>
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QComboBox" name="comboBox"/>
-        </item>
-       </layout>
+       <layout class="QGridLayout" name="gridLayout"/>
       </item>
       <item>
        <widget class="QFrame" name="filter_lay">

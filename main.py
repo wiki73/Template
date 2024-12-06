@@ -9,7 +9,7 @@ from desinger_file.ui_file import Ui_MainWindow
 from second_window import SecondWindow
 from sql import SQL
 from table_widget import Table
-
+from combox import ComboBox
 
 
 class MyWidget(QMainWindow, Ui_MainWindow):
@@ -24,8 +24,10 @@ class MyWidget(QMainWindow, Ui_MainWindow):
 
     def initui(self):
         self.table = Table()
+        self.combox = ComboBox()
         self.SQL = SQL()
         self.verticalLayout_2.addWidget(self.table)
+        self.gridLayout.addWidget(self.combox)
         self.horizontalSlider.setMinimum(5)  # Минимальный размер шрифта
         self.horizontalSlider.setMaximum(25)  # Максимальный размер шрифта
         self.horizontalSlider.setValue(10)  # Устанавливаем первоначальный размер шрифта

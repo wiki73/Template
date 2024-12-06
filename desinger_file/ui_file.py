@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui_file\main.ui'
+# Form implementation generated from reading ui file 'ui_file/main.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(1221, 783)
+        MainWindow.resize(894, 664)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -32,6 +32,14 @@ class Ui_MainWindow(object):
         self.main_lwidget.setObjectName("main_lwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.main_lwidget)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.comboBox = QtWidgets.QComboBox(parent=self.main_lwidget)
+        self.comboBox.setObjectName("comboBox")
+        self.gridLayout.addWidget(self.comboBox, 0, 0, 1, 1)
+        self.horizontalLayout_3.addLayout(self.gridLayout)
         self.filter_lay = QtWidgets.QFrame(parent=self.main_lwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -60,7 +68,10 @@ class Ui_MainWindow(object):
         self.check_button_group.setObjectName("check_button_group")
         self.check_button_group.addButton(self.all)
         self.horizontalLayout.addWidget(self.all)
-        self.verticalLayout.addWidget(self.filter_lay)
+        self.horizontalLayout_3.addWidget(self.filter_lay)
+        self.horizontalLayout_3.setStretch(0, 1)
+        self.horizontalLayout_3.setStretch(1, 20)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.main_horizantal = QtWidgets.QHBoxLayout()
         self.main_horizantal.setObjectName("main_horizantal")
         self.tab_lay = QtWidgets.QFrame(parent=self.main_lwidget)

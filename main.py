@@ -92,6 +92,7 @@ background-color: rgba(185, 0, 185, 150);'''
 
     def update_table(self):  # обновление таблицы
         self.table.clearContents()
+        self.combox.fuling_combobox()
         if self.current_check_button == "Всё":
             list_tag = self.SQL.get_all_templates()
         else:
@@ -104,7 +105,6 @@ background-color: rgba(185, 0, 185, 150);'''
 
     def check_btn_group(self):
         self.current_check_button = self.check_button_group.checkedButton().text()
-        print(self.current_check_button)
         self.update_table()
 
     def form_frame(self):  # Формирование фильтров

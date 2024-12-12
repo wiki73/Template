@@ -10,6 +10,15 @@ class SQL:
         res = list(self.cursor.execute("""SELECT * FROM s_table""").fetchall())
         return res
 
+    def get_all_folder(self):
+        res = list(self.cursor.execute("""SELECT name_folder FROM Folder_table""").fetchall())
+        return res
+
+    def delete_by_name_folder(self, name):
+        self.cursor.execute('DELETE FROM folder_table WHERE name_folder = ?', (name,))
+        self.conn.commit()
+
+
     def get_some_templates(self, tag):
         return self.cursor.execute("""SELECT * FROM s_table
                 WHERE tag LIKE ?""", (tag,)).fetchall()
@@ -26,17 +35,24 @@ class SQL:
     def delete_s_table(self):
         self.cursor.execute('''DELETE FROM s_table;''')
 
-    def insert_s_table(self,tag_text, name_text):
+    def insert_s_table(self, tag_text, name_text):
         self.cursor.execute('''INSERT INTO s_table (tag, title)  VALUES (?, ?)''',
-                       (tag_text, name_text))  # добавление в бд в s_table новый tag и новый title
+                            (tag_text, name_text))  # добавление в бд в s_table новый tag и новый title
         self.conn.commit()
 
-    def insert_code_table(self,name_text, code_text):
+    def insert_folder(self, name):
+        print(11)
+        self.cursor.execute('''INSERT INTO folder_table (name_folder) VALUES (?);''',
+                            (name,))  # добавление в бд в folder_table новый folder
+        print(22)
+        self.conn.commit()
+
+    def insert_code_table(self, name_text, code_text):
         self.cursor.execute('''INSERT INTO code_table  VALUES (?, ?)''',
-                       (str(name_text), str(code_text)))  # добавление в бд в code_table новый код
+                            (str(name_text), str(code_text)))  # добавление в бд в code_table новый код
         self.conn.commit()
 
-    def code_by_title(self,name):
+    def code_by_title(self, name):
         return self.cursor.execute('''SELECT code FROM code_table
                                                         WHERE title = ?''', (name,))
 
